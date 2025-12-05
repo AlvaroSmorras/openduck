@@ -270,7 +270,7 @@ def chunk_with_amber(
     elif mol_file.endswith('sdf') or mol_file.endswith('sd'):
         sup = Chem.SDMolSupplier(mol_file)
         mol = next(sup)
-    pdb_mol_file = mol_file.replace(mol_file.split('.')[-1], ".pdb")
+    pdb_mol_file = mol_file.replace(mol_file.split('.')[-1], "pdb")
     
     Chem.MolToPDBFile(mol, pdb_mol_file)
     protein = parmed.load_file(prot_file)
